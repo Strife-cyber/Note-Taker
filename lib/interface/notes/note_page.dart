@@ -9,7 +9,8 @@ class NotePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      child: Card(
+      child: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
