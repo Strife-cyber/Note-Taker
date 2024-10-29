@@ -21,7 +21,8 @@ class NotePage extends StatelessWidget {
                     style: const TextStyle(
                         color: Colors.black87,
                         fontWeight: FontWeight.bold,
-                        fontSize: 25)),
+                        fontSize: 25,
+                        fontFamily: 'Montaga')),
               ),
             ),
             Row(
@@ -31,22 +32,27 @@ class NotePage extends StatelessWidget {
                     style: const TextStyle(
                         color: Colors.black87,
                         fontSize: 15,
-                        overflow: TextOverflow.ellipsis)),
+                        overflow: TextOverflow.ellipsis,
+                        fontFamily: 'Pacifico')),
                 Text(
-                    note.tags.isNotEmpty
-                        ? "Tags: None"
-                        : "Tags: ${note.tags.join(', ')}",
+                    note.tags != []
+                        ? "Tags: ${note.tags.join(', ')}"
+                        : "Tags: None",
                     style: const TextStyle(
                         color: Colors.black87,
                         fontSize: 15,
-                        overflow: TextOverflow.ellipsis)),
+                        overflow: TextOverflow.ellipsis,
+                        fontFamily: 'Pacifico')),
               ],
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 16.0),
               child: Text(note.content,
-                  style: const TextStyle(color: Colors.black87, fontSize: 18),
-                  textAlign: TextAlign.center),
+                  style: const TextStyle(
+                      color: Colors.black87,
+                      fontSize: 18,
+                      fontFamily: 'Pacifico'),
+                  textAlign: TextAlign.start),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -55,12 +61,14 @@ class NotePage extends StatelessWidget {
                     style: const TextStyle(
                         color: Colors.black87,
                         fontSize: 12,
-                        overflow: TextOverflow.ellipsis)),
+                        overflow: TextOverflow.ellipsis,
+                        fontFamily: 'Pacifico')),
                 Text("Updated: ${note.toDate(note.lastUpdated)}",
                     style: const TextStyle(
                         color: Colors.black87,
                         fontSize: 12,
-                        overflow: TextOverflow.ellipsis))
+                        overflow: TextOverflow.ellipsis,
+                        fontFamily: 'Pacifico'))
               ],
             ),
           ],

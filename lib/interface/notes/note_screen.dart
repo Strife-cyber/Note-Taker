@@ -51,6 +51,7 @@ class _NoteScreenState extends State<NoteScreen> {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const AddNote()));
             },
+            hoverElevation: 2,
             tooltip: 'Add Note',
             child: const Icon(Icons.add),
           ),

@@ -33,13 +33,17 @@ class NoteModel extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      note.title,
-                      style: const TextStyle(
-                        color: Colors.black,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        overflow: TextOverflow.ellipsis,
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 5.0),
+                      child: Text(
+                        note.title,
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 20,
+                          fontFamily: 'Montaga',
+                          fontWeight: FontWeight.bold,
+                          overflow: TextOverflow.ellipsis,
+                        ),
                       ),
                     ),
                     Row(
@@ -48,20 +52,20 @@ class NoteModel extends StatelessWidget {
                         Text(
                           "Category: ${note.category}",
                           style: const TextStyle(
-                            color: Colors.black54,
-                            fontSize: 12,
-                            overflow: TextOverflow.ellipsis,
-                          ),
+                              color: Colors.black54,
+                              fontSize: 12,
+                              overflow: TextOverflow.ellipsis,
+                              fontFamily: 'Pacifico'),
                         ),
                         Text(
-                          note.tags.isEmpty
-                              ? "Tags: ${note.tags.join(', ')}"
+                          note.tags != []
+                              ? "Tags: ${note.tags.join(',')}"
                               : "Tags: None",
                           style: const TextStyle(
-                            color: Colors.black54,
-                            fontSize: 12,
-                            overflow: TextOverflow.ellipsis,
-                          ),
+                              color: Colors.black54,
+                              fontSize: 12,
+                              overflow: TextOverflow.ellipsis,
+                              fontFamily: 'Pacifico'),
                         ),
                       ],
                     ),
@@ -71,10 +75,10 @@ class NoteModel extends StatelessWidget {
                         note.content,
                         maxLines: 3,
                         style: const TextStyle(
-                          color: Colors.black54,
-                          fontSize: 14,
-                          overflow: TextOverflow.ellipsis,
-                        ),
+                            color: Colors.black54,
+                            fontSize: 14,
+                            overflow: TextOverflow.ellipsis,
+                            fontFamily: 'Pacifico'),
                       ),
                     ),
                     Row(
@@ -83,18 +87,18 @@ class NoteModel extends StatelessWidget {
                         Text(
                           "Created: ${note.toDate(note.createdAt)}",
                           style: const TextStyle(
-                            color: Colors.black54,
-                            fontSize: 12,
-                            overflow: TextOverflow.ellipsis,
-                          ),
+                              color: Colors.black54,
+                              fontSize: 12,
+                              overflow: TextOverflow.ellipsis,
+                              fontFamily: 'Pacifico'),
                         ),
                         Text(
                           "Updated: ${note.toDate(note.lastUpdated)}",
                           style: const TextStyle(
-                            color: Colors.black54,
-                            fontSize: 12,
-                            overflow: TextOverflow.ellipsis,
-                          ),
+                              color: Colors.black54,
+                              fontSize: 12,
+                              overflow: TextOverflow.ellipsis,
+                              fontFamily: 'Pacifico'),
                         ),
                       ],
                     ),
@@ -116,7 +120,10 @@ class NoteModel extends StatelessWidget {
           children: [
             ListTile(
               leading: const Icon(Icons.edit),
-              title: const Text('Update'),
+              title: const Text(
+                'Update',
+                style: TextStyle(fontFamily: 'Pacifico'),
+              ),
               onTap: () {
                 Navigator.pop(context);
                 // Implement the update functionality here
@@ -128,7 +135,10 @@ class NoteModel extends StatelessWidget {
             ),
             ListTile(
               leading: const Icon(Icons.delete),
-              title: const Text('Delete'),
+              title: const Text(
+                'Delete',
+                style: TextStyle(fontFamily: 'Pacifico'),
+              ),
               onTap: () {
                 Navigator.pop(context);
                 // Implement the delete functionality here

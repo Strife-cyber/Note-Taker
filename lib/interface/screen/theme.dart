@@ -66,7 +66,7 @@ class Themes {
     primaryColor: Colors.purple,
 
     // Background Colors
-    scaffoldBackgroundColor: Colors.grey[400],
+    scaffoldBackgroundColor: Colors.grey[200],
 
     // AppBar Theme
     appBarTheme: const AppBarTheme(
